@@ -7,7 +7,9 @@ In various social media platforms we tend to see several kinds of abusive commen
 3. Second Degree : This level comprises of 2 slur words and serious warning is needed
 4. Intolerable Degree : This level comprises of more than 2 slur words and the post needs to be removed
 
-In this code , the slur words are stored in a list 'slur_words' and are mentioned as 'slur1' , 'slur2' , 'slur3' etc.
+In this code present in the file filter.py , the slur words are stored in a list 'slur_words' and are mentioned as 'slur1' , 'slur2' , 'slur3' etc.
+
+The content.txt file contains some example sentences with slur words.
 
 The file is read through in-built file reading function (open) and using 'with' function, closing of the file is handled.
 
