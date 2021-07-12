@@ -1,3 +1,4 @@
+import slur_count as slur
 # I am assuming sentences in the file are seperated by a new line
 # File Read using open function. File closing is done by means of with function
 with open('content.txt', mode='r') as data:
@@ -10,33 +11,12 @@ with open('content.txt', mode='r') as data:
     if content_list == []:
         print('No data found in file')
 
-    # I have included a list of slur words marked as slur1 , slur2 , slur3 etc. which denotes the slur words in a list
-
-    slur_words = ['slur1', 'slur2', 'slur3', 'slur4', 'slur5']
-
-    # Function to find out the number of slur words used in a single sentence
-
-    def slur_count(sentence):
-
-        # Assigning the count variable to zero
-        count = 0
-
-        # Splitting the sentence into list of words
-        words = sentence.split()
-        for word in words:
-            for slur in slur_words:
-                if(word.lower() == slur):
-                    count = count+1
-
-        # Returning the slur word count
-        return count
-
     # I am using the function for each sentence taken from the file
     # Enumerate for knowing the sentence number for reference
 
     for value, content in enumerate(content_list):
 
-        count = slur_count(content)
+        count = slur.slur_count(content)
 
         # Making the index as 1
         value = value + 1
